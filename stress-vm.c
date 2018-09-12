@@ -94,6 +94,7 @@ static const vm_madvise_info_t vm_madvise_info[] = {
  */
 static bool HOT OPTIMIZE3 keep_stressing_vm(const args_t *args)
 {
+	usleep(VM_USLEEP);
 	return (LIKELY(g_keep_stressing_flag) &&
 	        LIKELY(!args->max_ops || ((*args->counter >> VM_BOGO_SHIFT) < args->max_ops)));
 }

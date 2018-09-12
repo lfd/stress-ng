@@ -46,6 +46,7 @@ static const stress_vm_addr_method_info_t vm_addr_methods[];
  */
 static bool HOT OPTIMIZE3 keep_stressing_vm(const args_t *args)
 {
+	usleep(VM_USLEEP);
 	return (LIKELY(g_keep_stressing_flag) &&
 	        LIKELY(!args->max_ops || (*args->counter < args->max_ops)));
 }

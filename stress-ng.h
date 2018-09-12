@@ -31,6 +31,9 @@
 #define _LARGEFILE64_SOURCE
 #define _FILE_OFFSET_BITS 	64
 
+#define VM_USLEEP 10
+#define USLEEP 10
+
 /* Some Solaris tool chains only define __sun */
 #if defined(__sun) && !defined(__sun__)
 #define __sun__
